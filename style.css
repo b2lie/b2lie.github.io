@@ -423,6 +423,7 @@ table {
 
 .title-overlay {
   font-family: 'Mojangle', sans-serif;
+  pointer-events: auto;
 }
 
 #blink {
