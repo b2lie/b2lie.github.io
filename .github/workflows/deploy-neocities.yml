@@ -9,8 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Upload index.html to Neocities
+      - name: Upload site to Neocities
         run: |
-          curl -F "file=@index.html" \
-               -H "Authorization: Bearer ${{ secrets.NEOCITIES_API_KEY }}" \
-               https://neocities.org/api/upload
+          # Upload all files in repo root recursively
+          find . -type f ! -path "./.github/*" -exec curl -F "file=@{}" \
+            -H "Authorization: Bearer ${{ secrets.NEOCITIES_API_KEY }}" \
+            https://neocities.org/api/upload \;
