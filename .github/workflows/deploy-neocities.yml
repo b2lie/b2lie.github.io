@@ -8,24 +8,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Install pandoc
-      run: sudo apt-get install pandoc -y
-
-    - name: Convert README.md to HTML
-      run: |
-        mkdir -p site/generated
-        pandoc README.md -f markdown -t html -o site/generated/readme.html
-
-    - name: Inject README into index.html
-      run: |
-        sed -i '/<!-- README_START -->/,/<!-- README_END -->/c\
-        <!-- README_START -->\n'$(cat site/generated/readme.html | sed 's/$/\\n/' | sed 's/"/\\"/g')'\n<!-- README_END -->' site/index.html
-
-    - name: Upload to Neocities
-      run: |
-        curl -F "file=@site/index.html" \
-             -H "Authorization: Bearer ${{ secrets.NEOCITIES_API_KEY }}" \
-             https://neocities.org/api/upload
+      - uses: actions/checkout@v3
+      - name: Upload index.html to Neocities
+        run: |
+          curl -F "file=@index.html" \
+               -H "Authorization: Bearer ${{ secrets.NEOCITIES_API_KEY }}" \
+               https://neocities.org/api/upload
