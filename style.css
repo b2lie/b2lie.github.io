@@ -425,28 +425,6 @@ table {
   font-family: 'Mojangle', sans-serif;
 }
 
-.readme-preview {
-  display: none;
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  overflow-y: scroll;
-  background: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  z-index: 100;
-}
-
-.readme-link:hover + .readme-preview {
-  display: block;
-}
-
-.readme-container {
-  position: relative;
-  display: inline-block;
-}
-
 #blink {
   font-size: 12px;
   font-weight: bold;
