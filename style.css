@@ -426,6 +426,18 @@ table {
   pointer-events: auto;
 }
 
+.title-overlay a {
+  font-family: 'Mojangle', sans-serif;
+  text-decoration: none;
+  color: #555;
+}
+
+.title-overlay a:hover {
+  font-family: 'Mojangle', sans-serif;
+  text-decoration: underline;
+  color: #52971a;
+}
+
 #blink {
   font-size: 12px;
   font-weight: bold;
