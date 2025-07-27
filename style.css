@@ -410,8 +410,7 @@ table {
   gap: 25px; 
   height: 100px; 
   width: 500px; 
-  font-size: 12px; 
-  font-family: 'Mojangle';
+  font-size: 12px;
   align-items: center; 
   vertical-align: middle; 
   justify-content: center;
@@ -422,7 +421,8 @@ table {
   width: 500px;
   height: 250px;
   grid-template-columns: auto auto;
-  padding: 60px 100px;
+  font-family: Verdana, Helvetica, Arial, Sans-Serif;
+  padding: 20px;
 }
 
 .container > div {

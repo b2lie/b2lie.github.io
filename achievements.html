@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Xbox.com | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="imgs/xbox-logo.webp" type="image/x-icon">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="top-bar">
+      <span><a>Home</a> | 8/30/2005 | Pakistan <img src="imgs/globe.png"> <a>International</a></span>
+      <div class="top-links">
+        <input type="text" name="keyword">
+        <button class="search-button" type="submit"> Search </button>
+        <button class="forum-button" type="button"> Forums </button>
+        <a href="#" class="sign-in"><img src="imgs/sign-in.gif"></a>
+      </div>
+    </div>
+
+    <header>
+      <div class="profile-box">
+        <div class="profile-header">
+          <span><a href="https://www.xbox.com/en-US/play/user/ba2l6545" target="_blank">View My Xbox.com
+              Profile</a></span>
+        </div>
+
+        <div class="profile-content">
+          <img src="imgs/avi.jpg" alt="avatar" class="profile-img">
+          <table class="profile-details">
+            <tr>
+              <td>Reputation:</td>
+              <td style="color:#e7bf10; font-weight: bolder;">★★★★☆</td>
+            </tr>
+            <tr>
+              <td>Gamerscore:</td>
+              <td>5905</td>
+            </tr>
+            <tr>
+              <td>Gamer zone:</td>
+              <td>Underground</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </header>
+
+    <nav class="xbox-nav">
+      <a href="#">Games</a>
+      <a href="#">Hardware</a>
+      <a href="#">Xbox Live</a>
+      <a href="#">Support</a>
+      <a href="#">Community</a>
+      <a href="index.html" class="selected-nav">My Xbox</a>
+    </nav>
+
+    <div class="nav-sub">
+      <a href="gamer_card.html">My Gamer Card</a>
+      <a href="projects.html">My Projects</a>
+      <a href="achievements.html">My Achievements</a>
+      <a href="interests.html">My Interests</a>
+    </div>
+
+    <main style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; height: 100%; padding: 30px;">
+      
+    </main>
+
+    <script type="text/javascript">
+      const blinkEls = [document.getElementById('blink'), document.getElementById('blink2')];
+
+      setInterval(() => {
+        blinkEls.forEach(el => {
+          el.style.opacity = (el.style.opacity == 0 ? 1 : 0);
+        });
+      }, 500);
+    </script>
+
+    <div class="footer">
+      <div class="bottom-links">
+        <p style="text-align: center;"><a href="#">Microsoft Game Studios</a> | <a href="#">Xbox Jobs</a> | <a href="#">Xbox Forums</a> | <a href="#">Developers</a>
+        | <a href="#">Xbox Gear Store</a>
+        </p>
+      </div>
+      <!-- <hr style="border: none; border-top: 1px solid rgba(0, 0, 0, 0.05); margin: 4px 0;"> -->
+
+      <div class="bottom-legal">
+        <p>
+          This is a fan-made site by <i>ba2l6545</i>. Xbox and the Xbox logos are trademarks of Microsoft Corporation. This site is not affiliated with or endorsed by Microsoft.
+        <br>
+        <!-- <a href="#">Privacy Statement</a> | <a href="#">Xbox.com Terms of Use</a> | <a href="#">Code of Conduct</a></p> -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
