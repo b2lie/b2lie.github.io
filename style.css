@@ -409,7 +409,8 @@ table {
   display: flex; 
   gap: 25px; 
   height: 100px; 
-  width: 500px; 
+  width: 500px;
+  padding-bottom: 40px;
   font-size: 12px;
   align-items: center; 
   vertical-align: middle; 
@@ -418,24 +419,25 @@ table {
 
 .container {
   display: grid;
-  width: 500px;
-  height: 250px;
+  align-items: center;
+  width: 400px;
+  height: fit-content;
   grid-template-columns: auto auto;
-  font-family: Verdana, Helvetica, Arial, Sans-Serif;
-  padding: 20px;
 }
 
 .container > div {
-  padding: 15px;
+  padding: 10px;
   font-size: 11px;
   text-align: center;
+  background-color: #e2e2e2;
+  border: 2px solid #aed750;
 }
 
 .project img {
-  width: 200px;
+  width: 150px;
 }
 
-.title-overlay {
+/* .title-overlay {
   font-family: 'Mojangle', sans-serif;
   pointer-events: auto;
 }
@@ -450,12 +452,67 @@ table {
   font-family: 'Mojangle', sans-serif;
   text-decoration: underline;
   color: #52971a;
+} */
+
+/* https://stackoverflow.com/questions/11716916/how-do-i-add-a-tooltip-to-an-image-in-html */
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* positioning the tooltip */
+  position: absolute;
+  z-index: 1;
 }
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+/* https://stackoverflow.com/questions/11716916/how-do-i-add-a-tooltip-to-an-image-in-html */
 
 .two-column-box {
   display: flex;
   align-items: center;
   gap: 200px;
+}
+
+.custom-list {
+  font-size: 14px;
+}
+
+.custom-list dt, .custom-list dd {
+  position: relative;
+  padding-left: 20px;
+}
+
+.custom-list dt::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+}
+
+.custom-list dd::before {
+  padding-top: 5px;
+  content: "+";
+  position: absolute;
+  left: 0;
+}
+
+.education-year {
+  margin-left: -20px;
+  font-weight: bold;
 }
 
 #blink {
@@ -509,7 +566,7 @@ table {
 }
 
 li {
-  margin: 15px 20px;
+  margin: 15px 0px;
 }
 
 .bottom-links {
