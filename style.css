@@ -452,6 +452,12 @@ table {
   color: #52971a;
 }
 
+.two-column-box {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+}
+
 #blink {
   font-size: 12px;
   font-weight: bold;
@@ -500,6 +506,10 @@ table {
 .footer {
   background-color: #515151;
   font-size: 9px;
+}
+
+li {
+  margin: 15px 20px;
 }
 
 .bottom-links {
